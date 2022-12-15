@@ -25,7 +25,7 @@ namespace Music.Tests
     {
       string artistName = "mac";
       Artist mac = new Artist(artistName);
-      Assert.AreEqual(artistName, mac.Name);
+      Assert.AreEqual(artistName, mac.ArtistName);
     }
 
     [TestMethod]

@@ -7,12 +7,14 @@ namespace Music.Models
     public string ArtistName { get; set; }
     public int Id { get; }
     public static List<Artist> _label = new List<Artist> { };
+    public List<Record> Records { get; set; }
 
     public Artist(string artistName)
     {
       ArtistName = artistName;
       _label.Add(this);
       Id = _label.Count;
+      Records = new List<Record> { };
     }
 
     public static void ClearAll()
