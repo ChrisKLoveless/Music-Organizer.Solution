@@ -4,13 +4,13 @@ namespace Music.Models
 {
   public class Artist
   {
-    public string Name { get; set; }
+    public string ArtistName { get; set; }
     public int Id { get; }
     public static List<Artist> _label = new List<Artist> { };
 
     public Artist(string artistName)
     {
-      Name = artistName;
+      ArtistName = artistName;
       _label.Add(this);
       Id = _label.Count;
     }
@@ -18,6 +18,11 @@ namespace Music.Models
     public static void ClearAll()
     {
       _label.Clear();
+    }
+
+    public static List<Artist> GetAll()
+    {
+      return _label;
     }
   }
 }

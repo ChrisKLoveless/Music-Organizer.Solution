@@ -35,5 +35,17 @@ namespace Music.Tests
       Artist mac = new Artist(artistName);
       Assert.AreEqual(1, mac.Id);
     }
+
+    [TestMethod]
+    public void GetAll_ReturnsAllArtistObjects_ArtistList()
+    {
+      string name1 = "mac";
+      string name2 = "miller";
+      Artist artist1 = new Artist(name1);
+      Artist artist2 = new Artist(name2);
+      List<Artist> artistList = new List<Artist>{artist1, artist2};
+      List<Artist> result = Artist.GetAll();
+      CollectionAssert.AreEqual(artistList, result);
+    }
   }
 }

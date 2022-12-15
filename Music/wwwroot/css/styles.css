@@ -1,0 +1,22 @@
+body {
+  background-color:rgb(165, 133, 83);
+}
+
+.jumbotron {
+  background-color: gray;
+  text-align: center;
+}
+
+a {
+  color: rgb(5, 80, 129);
+}
+
+div#footer {
+  position:fixed;
+  bottom:0px;
+  left:0px;
+  width:100%;
+  color:#CCC;
+  background:#333;
+  padding:8px;
+}
