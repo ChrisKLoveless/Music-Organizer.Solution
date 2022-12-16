@@ -6,12 +6,17 @@ using System;
 namespace Music.Tests
 {
   [TestClass]
-  public class RecordTests
+  public class RecordTests : IDisposable
   {
+    public void Dispose()
+    {
+      Record.ClearAll();
+    }
+  
     [TestMethod]
     public void Constructor_CreatesInstanceofRecord_Record()
     {
-      Record newRecord = new Record();
+      Record newRecord = new Record("test");
       Assert.AreEqual(typeof(Record), newRecord.GetType());
     }
   }

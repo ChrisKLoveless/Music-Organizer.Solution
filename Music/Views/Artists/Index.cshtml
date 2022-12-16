@@ -18,7 +18,7 @@
       @foreach(Artist artist in Model)
       {
         <ul>
-            <li>@artist.ArtistName</li>
+            <li><a href='/artists/@artist.Id'>@artist.ArtistName</a></li>
         </ul>
       }
     </div>

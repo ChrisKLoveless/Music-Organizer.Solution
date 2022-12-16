@@ -26,5 +26,15 @@ namespace Music.Models
     {
       return _label;
     }
+
+    public static Artist Find(int searchId)
+    {
+      return _label[searchId - 1];
+    }
+
+    public void AddRecord(Record record)
+    {
+      Records.Add(record);
+    }
   }
 }

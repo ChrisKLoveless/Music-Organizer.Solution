@@ -1,0 +1,19 @@
+@{
+  Layout = "_Layout";
+}
+
+<body>
+  <div class="container">
+    <div class="jumbotron">
+      <h2>Add a new record to @Model.ArtistName</h2>
+    </div>
+
+    <form action="/artists/@Model.Id/records" method="post">
+    <input id="artistId" name="artistId" type="hidden" value="@Model.Id">
+    <label for="recordTitle">Item Description</label>
+    <input id="recordTitle" name="recordTitle" type="text">
+    <button type='submit'>Add Item</button>
+  </form>
+
+  </div>
+</body>

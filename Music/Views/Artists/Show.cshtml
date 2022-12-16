@@ -1,0 +1,23 @@
+@{
+  Layout = "_Layout";
+}
+<body>
+  @using Music.Models
+  <div class="container">
+    <div class="jumbotron">
+      <h1>Here are the records for this artist:</h1>
+    </div>
+
+    <ol>
+      @foreach (Record record in @Model["records"])
+      {
+        <li><a href='/artists/@Model["artist"].Id/records/@record.Id'>@record.Title</a></li>
+      }
+    </ol>
+
+    <p><a href='/artists/@Model["artist"].Id/records/new'>Add a new record</a></p>
+    <h3><a href="/artists">Back to Artist List</a></h3>
+    <p><a href='/'>Back home</a></p>
+  </div>
+  
+</body>
